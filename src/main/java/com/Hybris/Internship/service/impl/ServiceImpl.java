@@ -37,6 +37,26 @@ public class ServiceImpl implements MainService {
         String info = orders.getUserId() + " " + orders.getStatus() + " " + orders.getCreatedAt();
         return info;
     }
+
+    @Override
+    public void createProduct(Products product) {
+            productsRepository.save(product);
+    }
+
+    @Override
+    public boolean deleteProductById(Long id) {
+        Products product = productsRepository.getOne((long) Math.toIntExact(id));
+        productsRepository.delete(product);
+        return true;
+    }
+
+    @Override
+    public boolean deleteAllProducts(String pass) {
+        productsRepository.deleteAll();
+        return true;
+    }
+
+
     @Override
     public List<Products> getAllProducts() {
         return productsRepository.findAll().stream().collect(Collectors.toList());

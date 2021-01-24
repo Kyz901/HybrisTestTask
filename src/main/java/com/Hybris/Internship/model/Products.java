@@ -1,11 +1,12 @@
 package com.Hybris.Internship.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+@RequiredArgsConstructor
 
+@ToString
 @Getter
 @Setter
 @Entity
@@ -18,10 +19,14 @@ public class Products implements Serializable {
     @Column(name = "name")
     private String name;
     @Column(name = "price")
-    private Long price;
+    private Double price;
     @Column(name = "status")
-    private Enum<Status> status;
+    private String status;
     @Column(name = "create_at")
     private String createAt;
+
+
+
+
 }
 

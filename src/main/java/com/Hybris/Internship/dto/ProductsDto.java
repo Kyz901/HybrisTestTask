@@ -12,7 +12,7 @@ import lombok.ToString;
 public class ProductsDto {
     private Long Id;
     private String name;
-    private Long price;
-    private Enum<Status> status;
+    private Double price;
+    private String status;
     private String createAt;
 }

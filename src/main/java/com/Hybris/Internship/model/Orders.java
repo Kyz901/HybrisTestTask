@@ -1,11 +1,11 @@
 package com.Hybris.Internship.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+@RequiredArgsConstructor
+
 @ToString
 @Getter
 @Setter

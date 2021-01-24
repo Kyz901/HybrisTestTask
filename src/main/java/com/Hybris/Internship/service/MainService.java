@@ -11,4 +11,7 @@ public interface MainService {
     public List<Products> getAllProducts();
     public List<OrderItems> getAllOrderItems();
     public String getInfoOrder(Long id);
+    public void createProduct(Products products);
+    public boolean deleteProductById(Long id);
+    public boolean deleteAllProducts(String pass);
 }
